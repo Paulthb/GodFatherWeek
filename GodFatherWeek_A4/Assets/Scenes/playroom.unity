@@ -147,8 +147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180.4, y: 5.6}
-  m_SizeDelta: {x: 58.8, y: 58.8}
+  m_AnchoredPosition: {x: -167.2, y: 18.848}
+  m_SizeDelta: {x: 32.3, y: 32.304}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1051065280
 Rigidbody2D:
@@ -162,7 +162,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 3
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -215,7 +215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adc6c0c7411a43a42bf75b5320120c98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
+  forceSpeed: 1500
+  maxSpeed: 400
   horizontalAxe: HorizontalRunner
   verticalAxe: VerticalRunner
 --- !u!1 &1209849951

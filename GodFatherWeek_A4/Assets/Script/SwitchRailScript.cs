@@ -16,15 +16,14 @@ public class SwitchRailScript : MonoBehaviour {
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("collision");
         if(other.gameObject.tag == "playerCanon")
         {
             other.gameObject.transform.position = transform.position;
             other.gameObject.GetComponent<CanonController>().SwitchRail();
-            Debug.Log("Changement de rail pour " + other.gameObject.name);
+            Debug.Log("Changement de rail pour " + other.gameObject.name + "passage à " + other.gameObject.GetComponent<CanonController>().onCurrentRail);
         }
-        Debug.Log(other.name);
     }
 }

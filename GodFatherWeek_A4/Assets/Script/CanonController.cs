@@ -87,7 +87,18 @@ public class CanonController : MonoBehaviour {
     {
         if (onCurrentRail == ON_RAIL.HORIZONTAL)
             onCurrentRail = ON_RAIL.VERTICAL;
-        if (onCurrentRail == ON_RAIL.VERTICAL)
+        else if (onCurrentRail == ON_RAIL.VERTICAL)
             onCurrentRail = ON_RAIL.HORIZONTAL;
+
+        if (onCurrentRail == ON_RAIL.HORIZONTAL)
+        {
+            objectRigidB.constraints = RigidbodyConstraints2D.None;
+            objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionY;
+        }
+        else if (onCurrentRail == ON_RAIL.VERTICAL)
+        {
+            objectRigidB.constraints = RigidbodyConstraints2D.None;
+            objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionX;
+        }
     }
 }

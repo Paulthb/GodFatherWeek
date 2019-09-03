@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShooterControler : MonoBehaviour {
 
+    int delay = 0;
+
     [SerializeField]
     private float forceSpeed;             //Floating point variable to store the player's movement speed.
     [SerializeField]
@@ -43,8 +45,7 @@ public class ShooterControler : MonoBehaviour {
         {
             objectRigidB.velocity = Vector3.ClampMagnitude(objectRigidB.velocity, maxSpeed);
         }
-
-
+        
         
     }
 
@@ -57,12 +58,13 @@ public class ShooterControler : MonoBehaviour {
         //Store the current vertical input in the float moveVertical.
         float moveVertical = Input.GetAxis(verticalAxe);
 
+        //Use the two store floats to create a new Vector2 variable movement.
+        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+
         float aimHorizontal = Input.GetAxis("HorizontalAim");
 
         float aimVertical = Input.GetAxis("VerticalAim");
-
-        //Use the two store floats to create a new Vector2 variable movement.
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        
 
         float angle = Vector2.SignedAngle(new Vector2(1, 0) ,new Vector2(aimHorizontal, aimVertical));
 

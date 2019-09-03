@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SwitchRailScript : MonoBehaviour {
 
-    [SerializeField]
     private Collider2D objectCollider;
 
 	// Use this for initialization
@@ -16,4 +15,16 @@ public class SwitchRailScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("collision");
+        if(other.gameObject.tag == "playerCanon")
+        {
+            other.gameObject.transform.position = transform.position;
+            other.gameObject.GetComponent<CanonController>().SwitchRail();
+            Debug.Log("Changement de rail pour " + other.gameObject.name);
+        }
+        Debug.Log(other.name);
+    }
 }

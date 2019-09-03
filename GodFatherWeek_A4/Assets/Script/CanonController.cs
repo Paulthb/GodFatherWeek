@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CanonController : MonoBehaviour {
 
-    public const float UPPER_LIMIT = 572;
-    public const float BOTTOM_LIMIT = 17;
-    public const float LEFT_LIMIT = 18;
-    public const float RIGHT_LIMIT = 1030;
+    public float UPPER_LIMIT = 572;
+    public float BOTTOM_LIMIT = 17;
+    public float LEFT_LIMIT = 18;
+    public float RIGHT_LIMIT = 1030;
 
     [SerializeField]
     private float forceSpeed;             //Floating point variable to store the player's movement speed.
@@ -81,5 +81,13 @@ public class CanonController : MonoBehaviour {
         float moveVertical = Input.GetAxis(verticalAxe);
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         objectRigidB.AddForce(movement * forceSpeed);
+    }
+
+    public void SwitchRail()
+    {
+        if (onCurrentRail == ON_RAIL.HORIZONTAL)
+            onCurrentRail = ON_RAIL.VERTICAL;
+        if (onCurrentRail == ON_RAIL.VERTICAL)
+            onCurrentRail = ON_RAIL.HORIZONTAL;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class CanonBall : MonoBehaviour {
 
     Rigidbody2D rb;
-    int dir = 1;
+    public float speed;
 
     void Awake()
     {
@@ -16,14 +16,10 @@ public class CanonBall : MonoBehaviour {
     void Start () {
 		
 	}
-
-    public void ChangeDirection()
-    {
-        dir *= -1;
-    }
+    
 
     // Update is called once per frame
     void Update () {
-        rb.velocity = new Vector2(50, 0 * dir);
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 }

@@ -5,6 +5,11 @@ using UnityEngine;
 public class RunnerControler : MonoBehaviour
 {
 
+    public const float UPPER_LIMIT = 4;
+    public const float BOTTOM_LIMIT = -4;
+    public const float LEFT_LIMIT = -7.883f;
+    public const float RIGHT_LIMIT = 7.885f;
+
     [SerializeField]
     private float forceSpeed;
     [SerializeField]
@@ -27,6 +32,26 @@ public class RunnerControler : MonoBehaviour
         if (objectRigidB.velocity.magnitude > maxSpeed)
         {
             objectRigidB.velocity = Vector3.ClampMagnitude(objectRigidB.velocity, maxSpeed);
+        }
+
+        // X axis
+        if (transform.position.x <= LEFT_LIMIT)
+        {
+            transform.position = new Vector2(LEFT_LIMIT, transform.position.y);
+        }
+        else if (transform.position.x >= RIGHT_LIMIT)
+        {
+            transform.position = new Vector2(RIGHT_LIMIT, transform.position.y);
+        }
+
+        // Y axis
+        if (transform.position.y <= BOTTOM_LIMIT)
+        {
+            transform.position = new Vector2(transform.position.x, BOTTOM_LIMIT);
+        }
+        else if (transform.position.y >= UPPER_LIMIT)
+        {
+            transform.position = new Vector2(transform.position.x, UPPER_LIMIT);
         }
     }
 

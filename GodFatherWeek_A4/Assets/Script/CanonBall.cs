@@ -26,4 +26,6 @@ public class CanonBall : MonoBehaviour {
     void Update () {
         rb.velocity = new Vector2(50, 0 * dir);
     }
+
+    public void Explo
 }

@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour {
     }
     private PLAYER_LIST currentRunner;
 
-    public GameObject Runner;
-    public GameObject Canon;
+    public PlayerScript Runner;
+    public PlayerScript Canon;
     private Vector3 o1Position, o2Position;
     bool access = false;
     float speed = 4.50f;
@@ -44,6 +44,36 @@ public class GameManager : MonoBehaviour {
             {
                 access = false;
             }
+
+            SwitchRole(Runner, Canon);
         }
+    }
+
+    public void SwitchRole(PlayerScript prevRunner, PlayerScript prevShooter)
+    {
+        //on lui donne les informations concernant les positions du canon sur les rails
+        prevRunner.GetComponent<CanonController>().onCurrentRail = prevShooter.GetComponent<CanonController>().onCurrentRail;
+        prevRunner.GetComponent<CanonController>().currentRailsPos = prevShooter.GetComponent<CanonController>().currentRailsPos;
+
+        //on freeze position pour le nouveau canon
+        Debug.Log(prevShooter.GetComponent<Rigidbody2D>().constraints);
+        //prevRunner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+        prevRunner.GetComponent<Rigidbody2D>().constraints = prevShooter.GetComponent<CanonController>().actuelConstraint;
+        //on désactive freeze position pour le nouveau runner
+        prevShooter.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+
+
+        //on désactive les script des anciens rôle et on acive les script des nouveux rôles
+        prevRunner.gameObject.GetComponent<RunnerControler>().enabled = false;
+        prevRunner.gameObject.GetComponent<CanonController>().enabled = true;
+        //prevRunner.gameObject.GetComponent<ShooterControler>().enabled = true;
+
+        prevShooter.gameObject.GetComponent<CanonController>().enabled = false;
+        //prevShooter.gameObject.GetComponent<ShooterControler>().enabled = false;
+        prevShooter.gameObject.GetComponent<RunnerControler>().enabled = true;
+
+        prevRunner.currentRole = PlayerScript.ROLE.SHOOTER;
+        prevShooter.currentRole = PlayerScript.ROLE.RUNNER;
+
     }
 }

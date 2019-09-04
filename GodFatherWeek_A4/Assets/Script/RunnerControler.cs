@@ -11,9 +11,9 @@ public class RunnerControler : MonoBehaviour
     public const float RIGHT_LIMIT = 7.885f;
 
     [SerializeField]
-    private float forceSpeed;
+    private float forceSpeed = 100f;
     [SerializeField]
-    private float maxSpeed = 10f;
+    private float maxSpeed = 20f;
 
     [SerializeField]
     private string horizontalAxe;

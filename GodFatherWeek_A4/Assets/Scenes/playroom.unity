@@ -290,8 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c490cad236a627b48bd3c5359341c6ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Runner: {fileID: 1889665571}
-  Canon: {fileID: 1635881231}
+  Runner: {fileID: 1889665578}
+  Canon: {fileID: 1635881238}
 --- !u!4 &279393592
 Transform:
   m_ObjectHideFlags: 0
@@ -305,11 +305,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &358510935 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4003535431603942, guid: a1229452087efd549807d66eee44cc41,
-    type: 2}
-  m_PrefabInternal: {fileID: 1327118439}
 --- !u!1 &395990942
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,62 +705,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &533270053
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 533270054}
-  - component: {fileID: 533270056}
-  - component: {fileID: 533270055}
-  m_Layer: 0
-  m_Name: LimitBulletZone
-  m_TagString: BulletDeadZone
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &533270054
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533270053}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 358510935}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &533270055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533270053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b96ca883329690d4f93fb2a99d65a6d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &533270056
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 533270053}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 15
 --- !u!1 &608115512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,18 +1190,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 4003535431603942, guid: a1229452087efd549807d66eee44cc41, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.249
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003535431603942, guid: a1229452087efd549807d66eee44cc41, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.249
-      objectReference: {fileID: 0}
-    - target: {fileID: 4003535431603942, guid: a1229452087efd549807d66eee44cc41, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.249
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1229452087efd549807d66eee44cc41, type: 2}
   m_IsPrefabAsset: 0
@@ -1314,14 +1241,16 @@ GameObject:
   - component: {fileID: 1635881235}
   - component: {fileID: 1635881234}
   - component: {fileID: 1635881233}
+  - component: {fileID: 1635881238}
   - component: {fileID: 1635881232}
+  - component: {fileID: 1635881237}
   m_Layer: 0
   m_Name: playerCanon1
   m_TagString: playerCanon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1635881232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1444,6 +1373,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1635881237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1635881231}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adc6c0c7411a43a42bf75b5320120c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceSpeed: 100
+  maxSpeed: 20
+  horizontalAxe: HorizontalRunner
+  verticalAxe: VerticalRunner
+--- !u!114 &1635881238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1635881231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8201b325add8b3459028e30caa2ce4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentRole: 1
+  nbPlayer: 1
 --- !u!1 &1694574914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,14 +1580,33 @@ GameObject:
   - component: {fileID: 1889665575}
   - component: {fileID: 1889665574}
   - component: {fileID: 1889665573}
+  - component: {fileID: 1889665578}
   - component: {fileID: 1889665577}
+  - component: {fileID: 1889665572}
   m_Layer: 0
   m_Name: playerRunner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
+--- !u!114 &1889665572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1889665571}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ef7128953ef4342ac1f132e33616c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceSpeed: 100
+  maxSpeed: 20
+  horizontalAxe: HorizontalRunner
+  verticalAxe: VerticalRunner
+  onCurrentRail: 1
+  currentRailsPos: 2
 --- !u!61 &1889665573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1751,6 +1727,19 @@ MonoBehaviour:
   maxSpeed: 20
   horizontalAxe: HorizontalRunner
   verticalAxe: VerticalRunner
+--- !u!114 &1889665578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1889665571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8201b325add8b3459028e30caa2ce4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentRole: 0
+  nbPlayer: 0
 --- !u!1 &1934375901
 GameObject:
   m_ObjectHideFlags: 0

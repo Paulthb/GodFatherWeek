@@ -20,7 +20,7 @@ public class BulletDeadZoneScript : MonoBehaviour {
     {
         if(collision.gameObject.tag == "Bullet")
         {
-            Debug.Log("une balle est sorti !!");
+            //Debug.Log("une balle est sorti !!");
             CanonBall bulletObject = collision.gameObject.GetComponent<CanonBall>();
             bulletObject.Explosion();
         }

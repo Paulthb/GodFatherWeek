@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour {
     bool access = false;
     float speed = 4.50f;
 
+    Vector3 o1Position, o2Position;
+    PlayerScript actualPrevRunner;
+    PlayerScript actualPrevShooter;
+
     // Use this for initialization
     void Start () {
 		
@@ -48,44 +52,52 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        //if (Input.GetKeyDown("space"))
-        //{
-        //    //print("switch launch");
-        //    //o1Position = Runner.transform.position;
-        //    //o2Position = Canon.transform.position;
-        //    //access = true;
-        //}
+        //o1Position = actualPrevRunner.transform.position;
+        //o2Position = actualPrevShooter.transform.position;
+        //access = true;
 
-        //if (access)
-        //{
-        //    Runner.transform.position = Vector3.MoveTowards(Runner.transform.position, o2Position, speed * Time.deltaTime);
-        //    Canon.transform.position = Vector3.MoveTowards(Canon.transform.position, o1Position, speed * Time.deltaTime);
+        if (access)
+        {
+            actualPrevRunner.transform.position = Vector3.MoveTowards(actualPrevRunner.transform.position, o2Position, speed * Time.deltaTime);
+            actualPrevShooter.transform.position = Vector3.MoveTowards(actualPrevShooter.transform.position, o1Position, speed * Time.deltaTime);
 
-        //    if (Runner.transform.position == o2Position && Canon.transform.position == o1Position)
-        //    {
-        //        access = false;
-        //    }
+            if (actualPrevRunner.transform.position == o2Position && actualPrevShooter.transform.position == o1Position)
+            {
+                access = false;
+                SwitchRole(actualPrevRunner, actualPrevShooter);
+            }
 
-        //    SwitchRole(Runner, Canon);
-        //}
+        }
     }
 
     public void SwitchPosition(PlayerScript prevRunner, PlayerScript prevShooter)
     {
-        Vector3 o1Position, o2Position;
-        print("switch launch");
-        o1Position = prevRunner.gameObject.transform.position;
-        o2Position = prevShooter.gameObject.transform.position;
+        actualPrevRunner = prevRunner;
+        actualPrevShooter = prevShooter;
 
-        prevRunner.transform.position = Vector3.MoveTowards(prevRunner.transform.position, o2Position, speed * Time.deltaTime);
-        prevShooter.transform.position = Vector3.MoveTowards(prevShooter.transform.position, o1Position, speed * Time.deltaTime);
+        o1Position = actualPrevRunner.transform.position;
+        o2Position = actualPrevShooter.transform.position;
 
-        SwitchRole(prevShooter, prevShooter);
+        access = true;
+
+        prevRunner.gameObject.GetComponent<RunnerControler>().enabled = false;
+        prevShooter.gameObject.GetComponent<CanonController>().enabled = false;
+        prevShooter.gameObject.GetComponent<ShooterControler>().enabled = false;
+
+
+        //Vector3 o1Position, o2Position;
+        //print("switch launch");
+        //o1Position = prevRunner.gameObject.transform.position;
+        //o2Position = prevShooter.gameObject.transform.position;
+
+        //prevRunner.transform.position = Vector3.MoveTowards(prevRunner.transform.position, o2Position, speed * Time.deltaTime);
+        //prevShooter.transform.position = Vector3.MoveTowards(prevShooter.transform.position, o1Position, speed * Time.deltaTime);
+
+        //SwitchRole(prevRunner, prevShooter);
     }
 
     public void SwitchRole(PlayerScript prevRunner, PlayerScript prevShooter)
     {
-
         //on lui donne les informations concernant les positions du canon sur les rails
         prevRunner.GetComponent<CanonController>().onCurrentRail = prevShooter.GetComponent<CanonController>().onCurrentRail;
         prevRunner.GetComponent<CanonController>().currentRailsPos = prevShooter.GetComponent<CanonController>().currentRailsPos;
@@ -97,19 +109,19 @@ public class GameManager : MonoBehaviour {
 
 
         //on désactive les script des anciens rôle et on acive les script des nouveux rôles
-        prevRunner.gameObject.GetComponent<RunnerControler>().enabled = false;
+        //prevRunner.gameObject.GetComponent<RunnerControler>().enabled = false;
         prevRunner.gameObject.GetComponent<CanonController>().enabled = true;
-        //prevRunner.gameObject.GetComponent<CanonController>().shooterControl.enabled = true;
+        prevRunner.gameObject.GetComponent<ShooterControler>().enabled = true;
 
-        prevShooter.gameObject.GetComponent<CanonController>().enabled = false;
-        //prevShooter.gameObject.GetComponent<CanonController>().shooterControl.enabled = true;
+        //prevShooter.gameObject.GetComponent<CanonController>().enabled = false;
+        //prevShooter.gameObject.GetComponent<ShooterControler>().enabled = false;
         prevShooter.gameObject.GetComponent<RunnerControler>().enabled = true;
 
         prevRunner.currentRole = PlayerScript.ROLE.SHOOTER;
         prevShooter.currentRole = PlayerScript.ROLE.RUNNER;
 
         prevRunner.tag = "playerCanon";
-        prevShooter.tag = "playerCanon";
+        prevShooter.tag = "playerRunner";
 
     }
 }

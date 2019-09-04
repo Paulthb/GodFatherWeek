@@ -39,7 +39,7 @@ public class CanonBall : MonoBehaviour {
     {
         colliderBullet.radius = 7f;
         yield return new WaitForSeconds(1f);
-        Debug.Log("bullet devrait se détruire");
+        //Debug.Log("bullet devrait se détruire");
         Destroy(this.gameObject);
     }
 
@@ -47,7 +47,7 @@ public class CanonBall : MonoBehaviour {
     {
         if (other.gameObject.tag == "playerRunner")
         {
-            Debug.Log("Exist " + bulletShooter);
+            Debug.Log("colision avec playerRunner");
             GameManager.Instance.SwitchPosition(other.gameObject.GetComponent<PlayerScript>(), bulletShooter.gameObject.GetComponent<PlayerScript>());
 
             Destroy(this.gameObject);

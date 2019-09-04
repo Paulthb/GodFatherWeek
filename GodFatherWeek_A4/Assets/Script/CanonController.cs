@@ -21,13 +21,22 @@ public class CanonController : MonoBehaviour {
 
     private Rigidbody2D objectRigidB;
 
+    //pour les mouvement du canon
     public enum ON_RAIL
     {
         HORIZONTAL,
         VERTICAL
     }
-
     public ON_RAIL onCurrentRail = ON_RAIL.HORIZONTAL;
+
+    public enum RAIL_POS
+    {
+        LEFT,
+        TOP,
+        RIGHT,
+        BOTTOM
+    }
+    public RAIL_POS currentRailsPos;
 
     void Start()
     {
@@ -83,7 +92,7 @@ public class CanonController : MonoBehaviour {
         objectRigidB.AddForce(movement * forceSpeed);
     }
 
-    public void SwitchRail()
+    public void SwitchRail(RAIL_POS pos)
     {
         if (onCurrentRail == ON_RAIL.HORIZONTAL)
             onCurrentRail = ON_RAIL.VERTICAL;
@@ -99,6 +108,23 @@ public class CanonController : MonoBehaviour {
         {
             objectRigidB.constraints = RigidbodyConstraints2D.None;
             objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionX;
+        }
+
+        currentRailsPos = pos;
+        switch(currentRailsPos)
+        {
+            case RAIL_POS.BOTTOM:
+                transform.Rotate(0, 0, 270);
+                break;
+            case RAIL_POS.LEFT:
+                transform.eulerAngles = new Vector3(0,0,180);
+                break;
+            case RAIL_POS.TOP:
+                transform.eulerAngles = new Vector3(0, 0, 90);
+                break;
+            case RAIL_POS.RIGHT:
+                transform.Rotate(0, 0, 0);
+                break;
         }
     }
 }

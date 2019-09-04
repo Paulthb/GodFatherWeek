@@ -305,6 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbddfd096eb281d43bce4ce45925d416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rails1: 0
+  Rails2: 1
 --- !u!61 &395990945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -506,6 +508,7 @@ MonoBehaviour:
   horizontalAxe: HorizontalRunner
   verticalAxe: VerticalRunner
   onCurrentRail: 0
+  currentRailsPos: 0
 --- !u!50 &436341154
 Rigidbody2D:
   serializedVersion: 4
@@ -1178,6 +1181,7 @@ MonoBehaviour:
   horizontalAxe: HorizontalRunner
   verticalAxe: VerticalRunner
   onCurrentRail: 0
+  currentRailsPos: 1
 --- !u!61 &1635881233
 BoxCollider2D:
   m_ObjectHideFlags: 0

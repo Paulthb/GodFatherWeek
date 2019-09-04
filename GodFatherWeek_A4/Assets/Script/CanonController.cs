@@ -18,6 +18,7 @@ public class CanonController : MonoBehaviour {
     private string horizontalAxe;
     [SerializeField]
     private string verticalAxe;
+    public ShooterControler shooterControl;
 
     private Rigidbody2D objectRigidB;
     [System.NonSerialized]

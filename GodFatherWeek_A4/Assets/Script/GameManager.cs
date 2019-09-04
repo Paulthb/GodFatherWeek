@@ -74,8 +74,8 @@ public class GameManager : MonoBehaviour {
     {
         Vector3 o1Position, o2Position;
         print("switch launch");
-        o1Position = prevRunner.transform.position;
-        o2Position = prevShooter.transform.position;
+        o1Position = prevRunner.gameObject.transform.position;
+        o2Position = prevShooter.gameObject.transform.position;
 
         prevRunner.transform.position = Vector3.MoveTowards(prevRunner.transform.position, o2Position, speed * Time.deltaTime);
         prevShooter.transform.position = Vector3.MoveTowards(prevShooter.transform.position, o1Position, speed * Time.deltaTime);
@@ -99,10 +99,10 @@ public class GameManager : MonoBehaviour {
         //on désactive les script des anciens rôle et on acive les script des nouveux rôles
         prevRunner.gameObject.GetComponent<RunnerControler>().enabled = false;
         prevRunner.gameObject.GetComponent<CanonController>().enabled = true;
-        //prevRunner.gameObject.GetComponent<ShooterControler>().enabled = true;
+        //prevRunner.gameObject.GetComponent<CanonController>().shooterControl.enabled = true;
 
         prevShooter.gameObject.GetComponent<CanonController>().enabled = false;
-        //prevShooter.gameObject.GetComponent<ShooterControler>().enabled = false;
+        //prevShooter.gameObject.GetComponent<CanonController>().shooterControl.enabled = true;
         prevShooter.gameObject.GetComponent<RunnerControler>().enabled = true;
 
         prevRunner.currentRole = PlayerScript.ROLE.SHOOTER;

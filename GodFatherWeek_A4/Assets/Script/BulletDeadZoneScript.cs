@@ -23,7 +23,7 @@ public class BulletDeadZoneScript : MonoBehaviour {
         {
             Debug.Log("une balle est sorti !!");
             CanonBall bulletObject = collision.gameObject.GetComponent<CanonBall>();
-
+            bulletObject.Explosion();
         }
     }
 }

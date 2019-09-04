@@ -80,10 +80,11 @@ public class GameManager : MonoBehaviour {
 
         access = true;
 
-        //on désactive les script des anciens rôle et 
+        //on désactive les script des anciens rôle
         prevRunner.gameObject.GetComponent<RunnerControler>().enabled = false;
         prevShooter.gameObject.GetComponent<CanonController>().enabled = false;
         prevShooter.gameObject.GetComponent<ShooterControler>().enabled = false;
+        prevShooter.canon.SetActive(false);
 
 
         //Vector3 o1Position, o2Position;
@@ -113,6 +114,7 @@ public class GameManager : MonoBehaviour {
         prevRunner.gameObject.GetComponent<CanonController>().enabled = true;
         prevRunner.gameObject.GetComponent<ShooterControler>().enabled = true;
         prevShooter.gameObject.GetComponent<RunnerControler>().enabled = true;
+        prevRunner.canon.SetActive(true);
 
         prevRunner.currentRole = PlayerScript.ROLE.SHOOTER;
         prevShooter.currentRole = PlayerScript.ROLE.RUNNER;

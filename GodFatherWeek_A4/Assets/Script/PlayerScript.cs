@@ -12,8 +12,11 @@ public class PlayerScript : MonoBehaviour {
     }
     public ROLE currentRole;
     public GameManager.PLAYER_LIST nbPlayer;
-    public SpriteRenderer SpritePlayerBase;
-    public SpriteRenderer SpritePlayerCanon;
+
+    public GameObject canon;
+
+    public Sprite SpritePlayerBase;
+    public Sprite SpritePlayerCanon;
 
     private int score;
 
@@ -26,4 +29,9 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void SwitchSprite()
+    {
+        GetComponent<SpriteRenderer>().sprite = SpritePlayerBase;
+    }
 }

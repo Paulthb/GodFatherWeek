@@ -11,11 +11,14 @@ public class PlayerScript : MonoBehaviour {
         SHOOTER
     }
     public ROLE currentRole;
-
     public GameManager.PLAYER_LIST nbPlayer;
 
-    private int score;
+    public GameObject canon;
 
+    public Sprite SpritePlayerBase;
+    public Sprite SpritePlayerCanon;
+
+    private int score;
 
 	// Use this for initialization
 	void Start () {
@@ -26,4 +29,9 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void SwitchSprite()
+    {
+        GetComponent<SpriteRenderer>().sprite = SpritePlayerBase;
+    }
 }

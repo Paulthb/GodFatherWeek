@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class CanonController : MonoBehaviour {
 
-    public const float UPPER_LIMIT = 4;
-    public const float BOTTOM_LIMIT = -4;
+    public const float UPPER_LIMIT = 4f;
+    public const float BOTTOM_LIMIT = -4f;
     public const float LEFT_LIMIT = -7.883f;
     public const float RIGHT_LIMIT = 7.885f;
 
     [SerializeField]
-    private float forceSpeed;             //Floating point variable to store the player's movement speed.
+    private float forceSpeed = 100f;             //Floating point variable to store the player's movement speed.
     [SerializeField]
-    private float maxSpeed = 10f;
+    private float maxSpeed = 20f;
 
     [SerializeField]
     private string horizontalAxe;
     [SerializeField]
     private string verticalAxe;
+    public ShooterControler shooterControl;
 
     private Rigidbody2D objectRigidB;
+    [System.NonSerialized]
+    public RigidbodyConstraints2D actuelConstraint;
 
     //pour les mouvement du canon
     public enum ON_RAIL
@@ -47,11 +50,13 @@ public class CanonController : MonoBehaviour {
         {
             objectRigidB.constraints = RigidbodyConstraints2D.None;
             objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionY;
+            actuelConstraint = RigidbodyConstraints2D.FreezePositionY;
         }
         else if (onCurrentRail == ON_RAIL.VERTICAL)
         {
             objectRigidB.constraints = RigidbodyConstraints2D.None;
             objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionX;
+            actuelConstraint = RigidbodyConstraints2D.FreezePositionX;
         }
     }
 
@@ -103,11 +108,13 @@ public class CanonController : MonoBehaviour {
         {
             objectRigidB.constraints = RigidbodyConstraints2D.None;
             objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionY;
+            actuelConstraint = RigidbodyConstraints2D.FreezePositionY;
         }
         else if (onCurrentRail == ON_RAIL.VERTICAL)
         {
             objectRigidB.constraints = RigidbodyConstraints2D.None;
             objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionX;
+            actuelConstraint = RigidbodyConstraints2D.FreezePositionX;
         }
 
         currentRailsPos = pos;

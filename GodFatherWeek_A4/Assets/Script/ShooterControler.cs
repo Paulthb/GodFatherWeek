@@ -46,14 +46,7 @@ public class ShooterControler : MonoBehaviour {
         {
             objectRigidB.velocity = Vector3.ClampMagnitude(objectRigidB.velocity, maxSpeed);
         }
-
-        if (Input.GetButtonDown("Fire1")&&delay>10)
-        {
-            Shoot();
-        }
-
-        delay++;
-
+        
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
@@ -75,15 +68,19 @@ public class ShooterControler : MonoBehaviour {
         float angle = Vector2.SignedAngle(new Vector2(1, 0) ,new Vector2(aimHorizontal, aimVertical));
 
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
-        
+
+        if (Input.GetButtonDown("Fire1") && delay > 10)
+        {
+            delay = -5;
+            Instantiate(bullet, a.transform.position, transform.rotation);
+        }
+
+        delay++;
+
         //Call the AddForce function of our Rigidbody2D rb2d supplying movement multiplied by speed to move our player.
         objectRigidB.AddForce(movement * forceSpeed);
     }
 
-    void Shoot()
-    {
-        delay = -5;
-        Instantiate(bullet, a.transform.position, Quaternion.identity);
-    }
+    
 
 }

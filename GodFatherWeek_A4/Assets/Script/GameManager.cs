@@ -4,6 +4,30 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
+    /// <summary>
+    /// /////////////////////////////////////
+    /// </summary>
+    
+    private static GameManager _instance;
+
+    public static GameManager Instance { get { return _instance; } }
+
+    private void Awake()
+    {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+    /// <summary>
+    /// ////////////////////////////////////////////////////////////// ?????????
+    /// </summary>
+
+
     public enum PLAYER_LIST
     {
         J1,
@@ -11,11 +35,8 @@ public class GameManager : MonoBehaviour {
         J3,
         J4
     }
-    private PLAYER_LIST currentRunner;
 
-    public PlayerScript Runner;
-    public PlayerScript Canon;
-    private Vector3 o1Position, o2Position;
+    private PLAYER_LIST currentRunner;
     bool access = false;
     float speed = 4.50f;
 
@@ -27,31 +48,43 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            print("switch launch");
-            o1Position = Runner.transform.position;
-            o2Position = Canon.transform.position;
-            access = true;
-        }
+        //if (Input.GetKeyDown("space"))
+        //{
+        //    //print("switch launch");
+        //    //o1Position = Runner.transform.position;
+        //    //o2Position = Canon.transform.position;
+        //    //access = true;
+        //}
 
-        if (access)
-        {
-            Runner.transform.position = Vector3.MoveTowards(Runner.transform.position, o2Position, speed * Time.deltaTime);
-            Canon.transform.position = Vector3.MoveTowards(Canon.transform.position, o1Position, speed * Time.deltaTime);
+        //if (access)
+        //{
+        //    Runner.transform.position = Vector3.MoveTowards(Runner.transform.position, o2Position, speed * Time.deltaTime);
+        //    Canon.transform.position = Vector3.MoveTowards(Canon.transform.position, o1Position, speed * Time.deltaTime);
 
-            if (Runner.transform.position == o2Position && Canon.transform.position == o1Position)
-            {
-                access = false;
-            }
+        //    if (Runner.transform.position == o2Position && Canon.transform.position == o1Position)
+        //    {
+        //        access = false;
+        //    }
 
-            SwitchRole(Runner, Canon);
-        }
+        //    SwitchRole(Runner, Canon);
+        //}
+    }
+
+    public void SwitchPosition(PlayerScript prevRunner, PlayerScript prevShooter)
+    {
+        Vector3 o1Position, o2Position;
+        print("switch launch");
+        o1Position = prevRunner.transform.position;
+        o2Position = prevShooter.transform.position;
+
+        prevRunner.transform.position = Vector3.MoveTowards(prevRunner.transform.position, o2Position, speed * Time.deltaTime);
+        prevShooter.transform.position = Vector3.MoveTowards(prevShooter.transform.position, o1Position, speed * Time.deltaTime);
+
+        SwitchRole(prevShooter, prevShooter);
     }
 
     public void SwitchRole(PlayerScript prevRunner, PlayerScript prevShooter)
     {
-
 
         //on lui donne les informations concernant les positions du canon sur les rails
         prevRunner.GetComponent<CanonController>().onCurrentRail = prevShooter.GetComponent<CanonController>().onCurrentRail;

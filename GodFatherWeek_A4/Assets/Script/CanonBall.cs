@@ -7,6 +7,9 @@ public class CanonBall : MonoBehaviour {
     private Rigidbody2D rb;
     private CircleCollider2D colliderBullet;
 
+    [System.NonSerialized]
+    public ShooterControler bulletShooter;
+
     public float speed;
 
     void Awake()
@@ -38,5 +41,13 @@ public class CanonBall : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         Debug.Log("bullet devrait se détruire");
         Destroy(this.gameObject);
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "playerRunner")
+        {
+            GameManager.Instance.SwitchPosition(other.gameObject.GetComponent<PlayerScript>(), bulletShooter.GetComponent<PlayerScript>());
+        }
     }
 }

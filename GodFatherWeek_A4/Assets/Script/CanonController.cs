@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CanonController : MonoBehaviour {
 
-    public const float UPPER_LIMIT = 572;
-    public const float BOTTOM_LIMIT = 17;
-    public const float LEFT_LIMIT = 18;
-    public const float RIGHT_LIMIT = 1030;
+    public const float UPPER_LIMIT = 4;
+    public const float BOTTOM_LIMIT = -4;
+    public const float LEFT_LIMIT = -7.883f;
+    public const float RIGHT_LIMIT = 7.885f;
 
     [SerializeField]
     private float forceSpeed;             //Floating point variable to store the player's movement speed.
@@ -21,13 +21,22 @@ public class CanonController : MonoBehaviour {
 
     private Rigidbody2D objectRigidB;
 
+    //pour les mouvement du canon
     public enum ON_RAIL
     {
         HORIZONTAL,
         VERTICAL
     }
-
     public ON_RAIL onCurrentRail = ON_RAIL.HORIZONTAL;
+
+    public enum RAIL_POS
+    {
+        LEFT,
+        TOP,
+        RIGHT,
+        BOTTOM
+    }
+    public RAIL_POS currentRailsPos;
 
     void Start()
     {
@@ -81,5 +90,41 @@ public class CanonController : MonoBehaviour {
         float moveVertical = Input.GetAxis(verticalAxe);
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         objectRigidB.AddForce(movement * forceSpeed);
+    }
+
+    public void SwitchRail(RAIL_POS pos)
+    {
+        if (onCurrentRail == ON_RAIL.HORIZONTAL)
+            onCurrentRail = ON_RAIL.VERTICAL;
+        else if (onCurrentRail == ON_RAIL.VERTICAL)
+            onCurrentRail = ON_RAIL.HORIZONTAL;
+
+        if (onCurrentRail == ON_RAIL.HORIZONTAL)
+        {
+            objectRigidB.constraints = RigidbodyConstraints2D.None;
+            objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionY;
+        }
+        else if (onCurrentRail == ON_RAIL.VERTICAL)
+        {
+            objectRigidB.constraints = RigidbodyConstraints2D.None;
+            objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionX;
+        }
+
+        currentRailsPos = pos;
+        switch(currentRailsPos)
+        {
+            case RAIL_POS.BOTTOM:
+                transform.Rotate(0, 0, 270);
+                break;
+            case RAIL_POS.LEFT:
+                transform.eulerAngles = new Vector3(0,0,180);
+                break;
+            case RAIL_POS.TOP:
+                transform.eulerAngles = new Vector3(0, 0, 90);
+                break;
+            case RAIL_POS.RIGHT:
+                transform.Rotate(0, 0, 0);
+                break;
+        }
     }
 }

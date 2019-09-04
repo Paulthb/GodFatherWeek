@@ -51,13 +51,13 @@ public class GameManager : MonoBehaviour {
 
     public void SwitchRole(PlayerScript prevRunner, PlayerScript prevShooter)
     {
+
+
         //on lui donne les informations concernant les positions du canon sur les rails
         prevRunner.GetComponent<CanonController>().onCurrentRail = prevShooter.GetComponent<CanonController>().onCurrentRail;
         prevRunner.GetComponent<CanonController>().currentRailsPos = prevShooter.GetComponent<CanonController>().currentRailsPos;
 
         //on freeze position pour le nouveau canon
-        Debug.Log(prevShooter.GetComponent<Rigidbody2D>().constraints);
-        //prevRunner.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
         prevRunner.GetComponent<Rigidbody2D>().constraints = prevShooter.GetComponent<CanonController>().actuelConstraint;
         //on désactive freeze position pour le nouveau runner
         prevShooter.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
@@ -74,6 +74,9 @@ public class GameManager : MonoBehaviour {
 
         prevRunner.currentRole = PlayerScript.ROLE.SHOOTER;
         prevShooter.currentRole = PlayerScript.ROLE.RUNNER;
+
+        prevRunner.tag = "playerCanon";
+        prevShooter.tag = "playerCanon";
 
     }
 }

@@ -71,8 +71,8 @@ public class GameManager : MonoBehaviour {
                 access = false;
                 SwitchRole(actualPrevRunner, actualPrevShooter);
 
-                actualPrevShooter.gameObject.GetComponent<Collider2D>().enabled = true;
-                actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = true;
+                //actualPrevShooter.gameObject.GetComponent<Collider2D>().enabled = true;
+                //actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = true;
             }
         }
     }
@@ -89,11 +89,12 @@ public class GameManager : MonoBehaviour {
         deathParticle.GetComponent<ParticleSystem>().Play();
 
         //frame d'invincibilité
-        actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = false;
-        actualPrevShooter.gameObject.GetComponent<Collider2D>().enabled = false;
+        StartCoroutine(InvicibilityFrame());
+        //actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = false;
+        //actualPrevShooter.gameObject.GetComponent<Collider2D>().enabled = false;
 
         //stop les déplacement de tout les players
-        StopMoving();
+        //StopMoving();
 
         access = true;
 
@@ -143,19 +144,28 @@ public class GameManager : MonoBehaviour {
         prevShooter.tag = "playerRunner";
 
         //relance tout les déplacements
-        StartMoving();
+        //StartMoving();
 
     }
 
     public void StopMoving()
     {
-        for (int i = 0; i <= playerScriptTab.Length; i++)
+        for (int i = 0; i < playerScriptTab.Length; i++)
             playerScriptTab[i].StopMoving(true);
     }
 
     public void StartMoving()
     {
-        for (int i = 0; i <= playerScriptTab.Length; i++)
+        for (int i = 0; i < playerScriptTab.Length; i++)
             playerScriptTab[i].StopMoving(false);
+    }
+
+    public IEnumerator InvicibilityFrame()
+    {
+        actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = false;
+        actualPrevShooter.gameObject.GetComponent<Collider2D>().enabled = false;
+        yield return new WaitForSeconds(1.5f);
+        actualPrevShooter.gameObject.GetComponent<Collider2D>().enabled = true;
+        actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = true;
     }
 }

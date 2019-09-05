@@ -15,6 +15,8 @@ public class CanonBall : MonoBehaviour {
 
     public float speed;
 
+    public bool isExploded = false;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,7 +28,6 @@ public class CanonBall : MonoBehaviour {
 		
 	}
     
-
     // Update is called once per frame
     void Update () {
         transform.Translate(Vector3.left * speed * Time.deltaTime);
@@ -43,7 +44,7 @@ public class CanonBall : MonoBehaviour {
     IEnumerator ExplosionCoroutine()
     {
         colliderBullet.radius = 7f;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         //Debug.Log("bullet devrait se détruire");
         Destroy(this.gameObject);
     }
@@ -56,15 +57,19 @@ public class CanonBall : MonoBehaviour {
             //Debug.Log(bulletShooter);
             //Debug.Log("exist " + other.gameObject.GetComponent<PlayerScript>() + bulletShooter.gameObject.GetComponent<PlayerScript>());
 
-            Explosion();
-            GameManager.Instance.SwitchPosition(other.gameObject.GetComponent<PlayerScript>(), bulletShooter.gameObject.GetComponent<PlayerScript>());
+            if (!isExploded)
+            {
+                Explosion();
+                GameManager.Instance.SwitchPosition(other.gameObject.GetComponent<PlayerScript>(), bulletShooter.gameObject.GetComponent<PlayerScript>());
+            }
 
             //Destroy(this.gameObject);
         }
 
         if (other.gameObject.tag == "decor" || other.gameObject.tag == "rails")
         {
-            Explosion();
+            if(!isExploded)
+                Explosion();
         }
     }
 }

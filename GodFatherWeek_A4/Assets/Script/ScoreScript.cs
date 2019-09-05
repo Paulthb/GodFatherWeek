@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour {
 
-    public static float scoreValue = 0;
+    public float scoreValue = 0;
     Text score;
     [SerializeField] private float timeBetwinAdd = 1;
     [SerializeField] private int scoreToAdd = 1;
@@ -19,7 +19,7 @@ public class ScoreScript : MonoBehaviour {
 
     public void Update()
     {
-        TheAddScore();
+        //TheAddScore();
     }
 
     public IEnumerator AddScore()
@@ -30,7 +30,6 @@ public class ScoreScript : MonoBehaviour {
         yield return new WaitForSeconds(timeBetwinAdd);
 
         StartCoroutine("AddScore");
-
     }
 
     public void EditScoreToAdd(int _score)
@@ -38,7 +37,7 @@ public class ScoreScript : MonoBehaviour {
         scoreToAdd = _score;
     }
 
-    private void TheAddScore()
+    public void TheAddScore()
     {
         scoreValue += Time.deltaTime * scoreToAdd;
         Debug.Log(scoreValue);

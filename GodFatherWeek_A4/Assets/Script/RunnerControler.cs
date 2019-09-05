@@ -58,8 +58,9 @@ public class RunnerControler : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, UPPER_LIMIT);
         }
-        
-            playerScore.AddScore();
+
+        if (this.gameObject.tag == "playerRunner")
+            playerScore.TheAddScore();
         
     }
 

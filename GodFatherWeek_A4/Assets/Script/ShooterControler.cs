@@ -5,7 +5,6 @@ using UnityEngine;
 public class ShooterControler : MonoBehaviour {
 
     int delay = 0;
-    
     GameObject a;
     
     [SerializeField]
@@ -14,9 +13,8 @@ public class ShooterControler : MonoBehaviour {
     private string verticalAim;
 
     private Rigidbody2D objectRigidB; //Store a reference to the Rigidbody2D component required to use 2D Physics.
-    
     public GameObject bullet;
-
+    
     private void Awake()
     {
         a = transform.Find("a").gameObject;

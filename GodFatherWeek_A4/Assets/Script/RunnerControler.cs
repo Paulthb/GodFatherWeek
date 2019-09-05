@@ -22,6 +22,8 @@ public class RunnerControler : MonoBehaviour
 
     private Rigidbody2D objectRigidB; 
 
+    public ScoreScript playerScore;
+
     void Start()
     {
         objectRigidB = GetComponent<Rigidbody2D>();
@@ -29,6 +31,9 @@ public class RunnerControler : MonoBehaviour
 
     void Update()
     {
+
+        //ScoreScript.scoreValue += 1;
+
         if (objectRigidB.velocity.magnitude > maxSpeed)
         {
             objectRigidB.velocity = Vector3.ClampMagnitude(objectRigidB.velocity, maxSpeed);
@@ -53,6 +58,8 @@ public class RunnerControler : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, UPPER_LIMIT);
         }
+
+        playerScore.AddScore();
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.

@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour {
         //on freeze position pour le nouveau canon
         prevRunner.GetComponent<Rigidbody2D>().constraints = prevShooter.GetComponent<CanonController>().actuelConstraint;
         //on désactive freeze position pour le nouveau runner
-        prevShooter.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        prevShooter.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
 
 
         //on acive les script des nouveux rôles
@@ -118,6 +118,8 @@ public class GameManager : MonoBehaviour {
 
         prevRunner.currentRole = PlayerScript.ROLE.SHOOTER;
         prevShooter.currentRole = PlayerScript.ROLE.RUNNER;
+
+        prevRunner.SwitchSprite();
 
         prevRunner.tag = "playerCanon";
         prevShooter.tag = "playerRunner";

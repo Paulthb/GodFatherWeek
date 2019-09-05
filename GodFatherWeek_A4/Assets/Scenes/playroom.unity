@@ -113,6 +113,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &78612993 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1761980590723078, guid: f7eacafafa9b67544835c7ef1bf21053,
+    type: 2}
+  m_PrefabInternal: {fileID: 649054817}
 --- !u!1 &191961309
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,6 +666,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114297147614545266, guid: f7eacafafa9b67544835c7ef1bf21053,
+        type: 2}
+      propertyPath: canon
+      value: 
+      objectReference: {fileID: 78612993}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7eacafafa9b67544835c7ef1bf21053, type: 2}
   m_IsPrefabAsset: 0
@@ -1080,9 +1090,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114348698834323998, guid: a100fee8588c8884085052cd88f55d68,
+        type: 2}
+      propertyPath: canon
+      value: 
+      objectReference: {fileID: 1350812816}
+    - target: {fileID: 1364157266970858, guid: a100fee8588c8884085052cd88f55d68, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a100fee8588c8884085052cd88f55d68, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1350812816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1364157266970858, guid: a100fee8588c8884085052cd88f55d68,
+    type: 2}
+  m_PrefabInternal: {fileID: 1290717457}
 --- !u!1 &1572736858
 GameObject:
   m_ObjectHideFlags: 0

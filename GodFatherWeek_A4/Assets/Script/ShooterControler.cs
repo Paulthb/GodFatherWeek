@@ -13,6 +13,8 @@ public class ShooterControler : MonoBehaviour {
     [SerializeField]
     private string verticalAim;
     [SerializeField]
+    private string fire;
+    [SerializeField]
     private Transform canon;
 
     private Rigidbody2D objectRigidB; //Store a reference to the Rigidbody2D component required to use 2D Physics.
@@ -35,16 +37,17 @@ public class ShooterControler : MonoBehaviour {
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
-        float aimHorizontal = Input.GetAxis("HorizontalAim1");
+        float aimHorizontal = Input.GetAxis(horizontalAim);
 
-        float aimVertical = Input.GetAxis("VerticalAim1");
+        float aimVertical = Input.GetAxis(verticalAim);
         
         float angle = Vector2.SignedAngle(new Vector2(-1, 0) ,new Vector2(aimHorizontal, aimVertical));
 
         canon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
-        if (Input.GetButtonDown("Fire1") && delay > 10)
+        if (Input.GetButtonDown(fire) && delay > 10)
         {
+            Debug.Log("FEU");
             delay = -5;
             GameObject bulletGAO = Instantiate(bullet, a.transform.position, canon.transform.rotation);
             bulletGAO.GetComponent<CanonBall>().bulletShooter = this.GetComponent<ShooterControler>();

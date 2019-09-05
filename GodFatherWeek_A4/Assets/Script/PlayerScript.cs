@@ -33,5 +33,6 @@ public class PlayerScript : MonoBehaviour {
     public void SwitchSprite()
     {
         GetComponent<SpriteRenderer>().sprite = SpritePlayerBase;
+        canon.GetComponent<SpriteRenderer>().sprite = SpritePlayerCanon;
     }
 }

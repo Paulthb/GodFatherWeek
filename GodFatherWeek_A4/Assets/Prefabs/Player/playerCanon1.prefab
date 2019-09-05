@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114927631235377104}
   - component: {fileID: 114770769089996126}
   - component: {fileID: 114826457414746534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: playerCanon1
   m_TagString: playerCanon
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4784777200684866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: a
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4637602687250672}
   - component: {fileID: 212083396484390848}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: canon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 4255116193592178}
   - component: {fileID: 58581017660906952}
   - component: {fileID: 114066983813775078}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LimitBulletZone
   m_TagString: BulletDeadZone
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1026608083926884}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -1.8, y: 4.01, z: 1.498588}
+  m_LocalPosition: {x: 5.51, y: 5, z: 1.498588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4637602687250672}
@@ -180,7 +180,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -220,6 +220,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentRole: 1
   nbPlayer: 1
+  canon: {fileID: 1761980590723078}
+  SpritePlayerBase: {fileID: 21300000, guid: 46fec43adb2624841b28d4f7e1e0b348, type: 3}
+  SpritePlayerCanon: {fileID: 21300000, guid: 6c1f7897c8bc966419b002c516f45c85, type: 3}
 --- !u!114 &114770769089996126
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -233,8 +236,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceSpeed: 100
   maxSpeed: 20
-  horizontalAxe: Horizontal1
-  verticalAxe: Vertical1
+  horizontalAxe: Horizontal2
+  verticalAxe: Vertical2
   onCurrentRail: 0
   currentRailsPos: 1
 --- !u!114 &114826457414746534
@@ -249,8 +252,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   a: {fileID: 1589819225558812}
-  horizontalAim: HorizontalAim1
-  verticalAim: VerticalAim1
+  horizontalAim: HorizontalAim2
+  verticalAim: VerticalAim2
+  fire: Fire2
   canon: {fileID: 4637602687250672}
   bullet: {fileID: 1204816191191532, guid: c5ef0014c2a7c034f8a2d24dea382f42, type: 2}
 --- !u!114 &114927631235377104
@@ -266,8 +270,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceSpeed: 100
   maxSpeed: 20
-  horizontalAxe: Horizontal1
-  verticalAxe: Vertical1
+  horizontalAxe: Horizontal2
+  verticalAxe: Vertical2
 --- !u!212 &212083396484390848
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -47,7 +47,10 @@ public class CanonBall : MonoBehaviour {
     {
         if (other.gameObject.tag == "playerRunner")
         {
-            Debug.Log("colision avec playerRunner");
+            //Debug.Log("colision avec playerRunner");
+            Debug.Log(bulletShooter);
+            Debug.Log("exist " + other.gameObject.GetComponent<PlayerScript>() + bulletShooter.gameObject.GetComponent<PlayerScript>());
+
             GameManager.Instance.SwitchPosition(other.gameObject.GetComponent<PlayerScript>(), bulletShooter.gameObject.GetComponent<PlayerScript>());
 
             Destroy(this.gameObject);

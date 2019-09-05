@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour {
 
-
     public enum ROLE
     {
         RUNNER,
@@ -21,6 +20,9 @@ public class PlayerScript : MonoBehaviour {
 
     private int score;
 
+    [System.NonSerialized]
+    public bool canMove = true;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -33,13 +35,23 @@ public class PlayerScript : MonoBehaviour {
 
     public void SwitchSprite(bool isOni)
     {
-        if (isOni)
+        if (!isOni)
         {
             GetComponent<SpriteRenderer>().sprite = spritePlayerBase;
             canon.GetComponent<SpriteRenderer>().sprite = spritePlayerCanon;
         }
         else
-
+        {
             GetComponent<SpriteRenderer>().sprite = spriteOni;
+            gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
+    }
+
+    public void StopMoving(bool cant)
+    {
+        if (cant)
+            canMove = false;
+        else
+            canMove = true;
     }
 }

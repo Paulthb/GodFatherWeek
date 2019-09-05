@@ -66,9 +66,12 @@ public class RunnerControler : MonoBehaviour
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis(horizontalAxe);
-        float moveVertical = Input.GetAxis(verticalAxe);
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
-        objectRigidB.AddForce(movement * forceSpeed);
+        if (GetComponent<PlayerScript>().canMove)
+        {
+            float moveHorizontal = Input.GetAxis(horizontalAxe);
+            float moveVertical = Input.GetAxis(verticalAxe);
+            Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+            objectRigidB.AddForce(movement * forceSpeed);
+        }
     }
 }

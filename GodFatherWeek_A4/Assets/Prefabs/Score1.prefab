@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 222601136448508338}
   - component: {fileID: 114200894868808586}
   - component: {fileID: 114754335299537058}
+  - component: {fileID: 111891936279583948}
   m_Layer: 0
   m_Name: Score1
   m_TagString: Untagged
@@ -29,6 +30,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!111 &111891936279583948
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1019493869562906}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: b65aa1b8dc1a64947be900b90b7a031c, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: b65aa1b8dc1a64947be900b90b7a031c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114200894868808586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -41,7 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.16078432, g: 0.67058825, b: 0.882353, a: 1}
+  m_Color: {r: 0.8113208, g: 0.04209684, b: 0.4650704, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -49,12 +65,12 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: 39ef922f6ecda6e4999bbfec1e217e7f, type: 3}
+    m_FontSize: 80
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 4
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -73,8 +89,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f381d4bcb9c05024fa12e9c4837b83e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 0
   timeBetwinAdd: 1
   scoreToAdd: 1
+  gameManager: {fileID: 0}
+  animeWin: {fileID: 111891936279583948}
+  finalScore: 50
 --- !u!222 &222601136448508338
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -88,15 +108,15 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1019493869562906}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -202.7, y: 116.7}
-  m_SizeDelta: {x: 58.96, y: 30}
+  m_AnchorMin: {x: 0.8453078, y: 0}
+  m_AnchorMax: {x: 1, y: 0.14500001}
+  m_AnchoredPosition: {x: 1, y: 0}
+  m_SizeDelta: {x: -3.5, y: -5.300003}
   m_Pivot: {x: 0.5, y: 0.5}

@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     private PlayerScript[] playerScriptTab;
 
+    [SerializeField]
+    private ScoreScript[] scoreTab;
+
     // Use this for initialization
     void Start () {
 		
@@ -75,6 +78,8 @@ public class GameManager : MonoBehaviour {
                 //actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = true;
             }
         }
+
+
     }
 
     public void SwitchPosition(PlayerScript prevRunner, PlayerScript prevShooter)
@@ -167,5 +172,11 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(1.5f);
         actualPrevShooter.gameObject.GetComponent<Collider2D>().enabled = true;
         actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = true;
+    }
+
+    public IEnumerator EndLevel()
+    {
+        StopMoving();
+        yield return new WaitForSeconds(7f);
     }
 }

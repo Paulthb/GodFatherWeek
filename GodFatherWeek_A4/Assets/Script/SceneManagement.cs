@@ -17,7 +17,7 @@ public class SceneManagement : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown("joystick 1 button 0"))
         {
             SceneManager.LoadScene("Test Romain");
         }

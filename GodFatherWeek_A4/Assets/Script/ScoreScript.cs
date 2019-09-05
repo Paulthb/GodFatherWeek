@@ -10,6 +10,10 @@ public class ScoreScript : MonoBehaviour {
     [SerializeField] private float timeBetwinAdd = 1;
     [SerializeField] private int scoreToAdd = 1;
 
+    public GameManager gameManager;
+
+    public float finalScore = 50;
+
     // Use this for initialization
     void Start () {
         score = GetComponent<Text>();
@@ -20,6 +24,11 @@ public class ScoreScript : MonoBehaviour {
     public void Update()
     {
         //TheAddScore();
+        if (scoreValue == finalScore)
+        {
+            gameManager.EndLevel();
+        }
+
     }
 
     public IEnumerator AddScore()

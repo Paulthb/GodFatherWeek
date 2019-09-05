@@ -6687,6 +6687,26 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 61193915316621824, guid: a100fee8588c8884085052cd88f55d68,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61193915316621824, guid: a100fee8588c8884085052cd88f55d68,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 61193915316621824, guid: a100fee8588c8884085052cd88f55d68,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 61193915316621824, guid: a100fee8588c8884085052cd88f55d68,
+        type: 2}
+      propertyPath: m_AutoTiling
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a100fee8588c8884085052cd88f55d68, type: 2}
   m_IsPrefabAsset: 0

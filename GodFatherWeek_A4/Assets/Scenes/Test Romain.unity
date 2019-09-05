@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 10758268}
   m_Layer: 0
   m_Name: Rocks_1 (6)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 108037489}
   m_Layer: 0
   m_Name: Rocks_1 (3)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 182775515}
   m_Layer: 0
   m_Name: Track V2 (21)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 191866200}
   m_Layer: 0
   m_Name: Track V2 (34)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1030,7 +1030,7 @@ GameObject:
   - component: {fileID: 249337490}
   m_Layer: 0
   m_Name: Rocks_2 (5)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1106,7 +1106,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0019134879, y: -0.022963032}
+  m_Offset: {x: 0.0019134879, y: -0.0024472736}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1117,7 +1117,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61246705, y: 0.61629415}
+  m_Size: {x: 0.61246705, y: 0.24987322}
   m_EdgeRadius: 0
 --- !u!50 &249337491
 Rigidbody2D:
@@ -1152,7 +1152,7 @@ GameObject:
   - component: {fileID: 251765218}
   m_Layer: 0
   m_Name: Rocks_1 (5)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1272,7 +1272,7 @@ GameObject:
   - component: {fileID: 300944632}
   m_Layer: 0
   m_Name: Track V2 (8)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1347,7 +1347,7 @@ GameObject:
   - component: {fileID: 312480886}
   m_Layer: 0
   m_Name: Track V2 (27)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1422,7 +1422,7 @@ GameObject:
   - component: {fileID: 332322324}
   m_Layer: 0
   m_Name: Track V2 (38)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1497,7 +1497,7 @@ GameObject:
   - component: {fileID: 378214640}
   m_Layer: 0
   m_Name: Track V2 (36)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1647,7 +1647,7 @@ GameObject:
   - component: {fileID: 419013340}
   m_Layer: 0
   m_Name: Track V2 (29)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1722,7 +1722,7 @@ GameObject:
   - component: {fileID: 424230709}
   m_Layer: 0
   m_Name: Track V2 (28)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1834,7 +1834,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 6.4135036
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1859,7 +1859,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -11.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 875163738}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1874,7 +1875,7 @@ GameObject:
   - component: {fileID: 491149519}
   m_Layer: 0
   m_Name: Track V2 (41)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1951,7 +1952,7 @@ GameObject:
   - component: {fileID: 508146216}
   m_Layer: 0
   m_Name: Rocks_2 (3)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2098,6 +2099,11 @@ Prefab:
     - target: {fileID: 4481195497209628, guid: e22c011598b31014e859c43b16c6c23d, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114927631235377104, guid: e22c011598b31014e859c43b16c6c23d,
+        type: 2}
+      propertyPath: playerScore
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e22c011598b31014e859c43b16c6c23d, type: 2}
@@ -2929,7 +2935,7 @@ GameObject:
   - component: {fileID: 607940873}
   m_Layer: 0
   m_Name: Track V2 (11)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3006,7 +3012,7 @@ GameObject:
   - component: {fileID: 615878322}
   m_Layer: 0
   m_Name: log (1)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3082,7 +3088,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0019134879, y: -0.022963032}
+  m_Offset: {x: -0.001309663, y: -0.15123905}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3093,7 +3099,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61246705, y: 0.61629415}
+  m_Size: {x: 0.8455128, y: 0.26021245}
   m_EdgeRadius: 0
 --- !u!50 &615878323
 Rigidbody2D:
@@ -3128,7 +3134,7 @@ GameObject:
   - component: {fileID: 633065548}
   m_Layer: 0
   m_Name: Rocks_1 (1)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3250,7 +3256,7 @@ GameObject:
   - component: {fileID: 638823841}
   m_Layer: 0
   m_Name: Stump (1)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3372,7 +3378,7 @@ GameObject:
   - component: {fileID: 650301888}
   m_Layer: 0
   m_Name: log
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3448,7 +3454,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0019134879, y: -0.022963032}
+  m_Offset: {x: 0.0011391193, y: -0.17959253}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3459,7 +3465,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61246705, y: 0.61629415}
+  m_Size: {x: 0.865451, y: 0.30303517}
   m_EdgeRadius: 0
 --- !u!50 &650301889
 Rigidbody2D:
@@ -3494,7 +3500,7 @@ GameObject:
   - component: {fileID: 666272317}
   m_Layer: 0
   m_Name: Rocks_1 (2)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3614,7 +3620,7 @@ GameObject:
   - component: {fileID: 721073021}
   m_Layer: 0
   m_Name: Track V2 (6)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3678,6 +3684,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &741054213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 741054216}
+  - component: {fileID: 741054215}
+  - component: {fileID: 741054214}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &741054214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 741054213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &741054215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 741054213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &741054216
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 741054213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &767289015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3689,7 +3757,7 @@ GameObject:
   - component: {fileID: 767289017}
   m_Layer: 0
   m_Name: Track V2 (23)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3839,7 +3907,7 @@ GameObject:
   - component: {fileID: 788156404}
   m_Layer: 0
   m_Name: Track V2 (10)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3914,7 +3982,7 @@ GameObject:
   - component: {fileID: 808942262}
   m_Layer: 0
   m_Name: Track V2 (31)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3991,7 +4059,7 @@ GameObject:
   - component: {fileID: 809987705}
   m_Layer: 0
   m_Name: Rocks_3 (1)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4111,7 +4179,7 @@ GameObject:
   - component: {fileID: 839485538}
   m_Layer: 0
   m_Name: Track V2 (18)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4186,7 +4254,7 @@ GameObject:
   - component: {fileID: 843842087}
   m_Layer: 0
   m_Name: Track V2 (15)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4313,7 +4381,7 @@ GameObject:
   - component: {fileID: 873289168}
   m_Layer: 0
   m_Name: Track V2 (33)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4377,6 +4445,99 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &875163737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 875163738}
+  - component: {fileID: 875163741}
+  - component: {fileID: 875163740}
+  - component: {fileID: 875163739}
+  m_Layer: 0
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &875163738
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 875163737}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 429949006}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &875163739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 875163737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &875163740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 875163737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &875163741
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 875163737}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &885977055
 GameObject:
   m_ObjectHideFlags: 0
@@ -6763,7 +6924,7 @@ GameObject:
   - component: {fileID: 897387537}
   m_Layer: 0
   m_Name: Rocks_1 (7)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6885,7 +7046,7 @@ GameObject:
   - component: {fileID: 978563345}
   m_Layer: 0
   m_Name: Rocks_2 (6)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6961,7 +7122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0019134879, y: -0.022963032}
+  m_Offset: {x: 0.0019134879, y: -0.00937333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6972,7 +7133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61246705, y: 0.61629415}
+  m_Size: {x: 0.61246705, y: 0.24661155}
   m_EdgeRadius: 0
 --- !u!50 &978563346
 Rigidbody2D:
@@ -7022,6 +7183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathParticle: {fileID: 861789162}
+  playerScriptTab: []
 --- !u!4 &1012064452
 Transform:
   m_ObjectHideFlags: 0
@@ -7122,7 +7284,7 @@ GameObject:
   - component: {fileID: 1063845376}
   m_Layer: 0
   m_Name: Track V2 (39)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7199,7 +7361,7 @@ GameObject:
   - component: {fileID: 1112512050}
   m_Layer: 0
   m_Name: Stump
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7317,11 +7479,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4697558094348056, guid: a100fee8588c8884085052cd88f55d68, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.88
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 4697558094348056, guid: a100fee8588c8884085052cd88f55d68, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.05
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4697558094348056, guid: a100fee8588c8884085052cd88f55d68, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7361,7 +7523,7 @@ GameObject:
   - component: {fileID: 1149199451}
   m_Layer: 0
   m_Name: Track V2 (37)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7436,7 +7598,7 @@ GameObject:
   - component: {fileID: 1174682867}
   m_Layer: 0
   m_Name: Track V2 (30)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7586,7 +7748,7 @@ GameObject:
   - component: {fileID: 1248218070}
   m_Layer: 0
   m_Name: Track V2 (22)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7661,7 +7823,7 @@ GameObject:
   - component: {fileID: 1282987654}
   m_Layer: 0
   m_Name: Track V2 (14)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7736,7 +7898,7 @@ GameObject:
   - component: {fileID: 1284366211}
   m_Layer: 0
   m_Name: Track V2 (16)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7886,7 +8048,7 @@ GameObject:
   - component: {fileID: 1373813189}
   m_Layer: 0
   m_Name: Track V2
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7961,7 +8123,7 @@ GameObject:
   - component: {fileID: 1424008214}
   m_Layer: 0
   m_Name: Track V2 (13)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8036,7 +8198,7 @@ GameObject:
   - component: {fileID: 1451484040}
   m_Layer: 0
   m_Name: Track V2 (7)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8139,6 +8301,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114927631235377104, guid: f7eacafafa9b67544835c7ef1bf21053,
+        type: 2}
+      propertyPath: playerScore
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7eacafafa9b67544835c7ef1bf21053, type: 2}
   m_IsPrefabAsset: 0
@@ -8153,7 +8320,7 @@ GameObject:
   - component: {fileID: 1507928748}
   m_Layer: 0
   m_Name: Track V2 (42)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10738,7 +10905,7 @@ GameObject:
   - component: {fileID: 1529933693}
   m_Layer: 0
   m_Name: Rocks_1 (4)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10858,7 +11025,7 @@ GameObject:
   - component: {fileID: 1541317724}
   m_Layer: 0
   m_Name: Track V2 (20)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10933,7 +11100,7 @@ GameObject:
   - component: {fileID: 1658801142}
   m_Layer: 0
   m_Name: Track V2 (17)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11010,7 +11177,7 @@ GameObject:
   - component: {fileID: 1681454424}
   m_Layer: 0
   m_Name: Rocks_3
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11130,7 +11297,7 @@ GameObject:
   - component: {fileID: 1690825567}
   m_Layer: 0
   m_Name: Track V2 (24)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11207,7 +11374,7 @@ GameObject:
   - component: {fileID: 1727418994}
   m_Layer: 0
   m_Name: Rocks_2
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11283,7 +11450,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0019134879, y: -0.022963032}
+  m_Offset: {x: 0.0019134879, y: -0.005080156}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11294,7 +11461,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61246705, y: 0.61629415}
+  m_Size: {x: 0.61246705, y: 0.22081439}
   m_EdgeRadius: 0
 --- !u!50 &1727418995
 Rigidbody2D:
@@ -11327,7 +11494,7 @@ GameObject:
   - component: {fileID: 1853133006}
   m_Layer: 0
   m_Name: Track V2 (35)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11508,7 +11675,7 @@ GameObject:
   - component: {fileID: 1961196592}
   m_Layer: 0
   m_Name: Rocks_2 (4)
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11584,7 +11751,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0019134879, y: -0.022963032}
+  m_Offset: {x: 0.0019134879, y: -0.012923174}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11595,7 +11762,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.61246705, y: 0.61629415}
+  m_Size: {x: 0.61246705, y: 0.242862}
   m_EdgeRadius: 0
 --- !u!50 &1961196593
 Rigidbody2D:
@@ -11656,6 +11823,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114927631235377104, guid: 456491155978df945b3c816833815280,
+        type: 2}
+      propertyPath: playerScore
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 456491155978df945b3c816833815280, type: 2}
   m_IsPrefabAsset: 0
@@ -11670,7 +11842,7 @@ GameObject:
   - component: {fileID: 1973703015}
   m_Layer: 0
   m_Name: Track V2 (26)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11745,7 +11917,7 @@ GameObject:
   - component: {fileID: 1991448800}
   m_Layer: 0
   m_Name: Track V2 (12)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11820,7 +11992,7 @@ GameObject:
   - component: {fileID: 1994464224}
   m_Layer: 0
   m_Name: Track V2 (19)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11985,7 +12157,7 @@ GameObject:
   - component: {fileID: 2032967870}
   m_Layer: 0
   m_Name: Rocks_1
-  m_TagString: Untagged
+  m_TagString: decor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12105,7 +12277,7 @@ GameObject:
   - component: {fileID: 2047834059}
   m_Layer: 0
   m_Name: Track V2 (32)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12180,7 +12352,7 @@ GameObject:
   - component: {fileID: 2096600753}
   m_Layer: 0
   m_Name: Track V2 (25)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12255,7 +12427,7 @@ GameObject:
   - component: {fileID: 2125828732}
   m_Layer: 0
   m_Name: Track V2 (40)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12330,7 +12502,7 @@ GameObject:
   - component: {fileID: 2146143807}
   m_Layer: 0
   m_Name: Track V2 (9)
-  m_TagString: Untagged
+  m_TagString: rails
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

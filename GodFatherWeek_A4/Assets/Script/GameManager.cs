@@ -46,6 +46,8 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField]
     private GameObject deathParticle;
+    [SerializeField]
+    private PlayerScript[] playerScriptTab;
 
     // Use this for initialization
     void Start () {
@@ -68,6 +70,9 @@ public class GameManager : MonoBehaviour {
             {
                 access = false;
                 SwitchRole(actualPrevRunner, actualPrevShooter);
+
+                actualPrevShooter.gameObject.GetComponent<Collider2D>().enabled = true;
+                actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = true;
             }
         }
     }
@@ -82,6 +87,13 @@ public class GameManager : MonoBehaviour {
 
         deathParticle.transform.position = o1Position;
         deathParticle.GetComponent<ParticleSystem>().Play();
+
+        //frame d'invincibilité
+        actualPrevRunner.gameObject.GetComponent<Collider2D>().enabled = false;
+        actualPrevShooter.gameObject.GetComponent<Collider2D>().enabled = false;
+
+        //stop les déplacement de tout les players
+        StopMoving();
 
         access = true;
 
@@ -130,5 +142,20 @@ public class GameManager : MonoBehaviour {
         prevRunner.tag = "playerCanon";
         prevShooter.tag = "playerRunner";
 
+        //relance tout les déplacements
+        StartMoving();
+
+    }
+
+    public void StopMoving()
+    {
+        for (int i = 0; i <= playerScriptTab.Length; i++)
+            playerScriptTab[i].StopMoving(true);
+    }
+
+    public void StartMoving()
+    {
+        for (int i = 0; i <= playerScriptTab.Length; i++)
+            playerScriptTab[i].StopMoving(false);
     }
 }

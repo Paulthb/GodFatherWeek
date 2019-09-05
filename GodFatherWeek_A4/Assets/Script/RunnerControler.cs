@@ -58,8 +58,9 @@ public class RunnerControler : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, UPPER_LIMIT);
         }
-
-        playerScore.AddScore();
+        
+            playerScore.AddScore();
+        
     }
 
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.

@@ -5,20 +5,21 @@ using UnityEngine;
 public class ShooterControler : MonoBehaviour {
 
     int delay = 0;
-    GameObject a;
+    
+    public GameObject a;
     
     [SerializeField]
     private string horizontalAim;
     [SerializeField]
     private string verticalAim;
+    [SerializeField]
+    private string fire;
+    [SerializeField]
+    private Transform canon;
 
     private Rigidbody2D objectRigidB; //Store a reference to the Rigidbody2D component required to use 2D Physics.
     public GameObject bullet;
-    
-    private void Awake()
-    {
-        a = transform.Find("a").gameObject;
-    }
+
 
     // Use this for initialization
     void Start()
@@ -35,18 +36,18 @@ public class ShooterControler : MonoBehaviour {
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
-        float aimHorizontal = Input.GetAxis("HorizontalAim");
+        float aimHorizontal = Input.GetAxis(horizontalAim);
 
-        float aimVertical = Input.GetAxis("VerticalAim");
+        float aimVertical = Input.GetAxis(verticalAim);
         
         float angle = Vector2.SignedAngle(new Vector2(-1, 0) ,new Vector2(aimHorizontal, aimVertical));
 
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        canon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
 
-        if (Input.GetButtonDown("Fire1") && delay > 10)
+        if (Input.GetButtonDown(fire) && delay > 10)
         {
             delay = -5;
-            GameObject bulletGAO = Instantiate(bullet, a.transform.position, transform.rotation);
+            GameObject bulletGAO = Instantiate(bullet, a.transform.position, canon.transform.rotation);
             bulletGAO.GetComponent<CanonBall>().bulletShooter = this.GetComponent<ShooterControler>();
         }
 

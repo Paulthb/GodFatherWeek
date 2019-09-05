@@ -10,6 +10,9 @@ public class CanonBall : MonoBehaviour {
     [System.NonSerialized]
     public ShooterControler bulletShooter;
 
+    [SerializeField]
+    private ParticleSystem explosionParticle;
+
     public float speed;
 
     void Awake()
@@ -31,15 +34,21 @@ public class CanonBall : MonoBehaviour {
 
     public void Explosion()
     {
+        Debug.Log("EXPLOSION");
+        speed = 0;
+        //rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        rb.velocity = Vector2.zero;
+        rb.angularVelocity = 0;
         Destroy(this.gameObject.GetComponent<SpriteRenderer>());
         StartCoroutine(ExplosionCoroutine());
+        explosionParticle.Play();
     }
 
     IEnumerator ExplosionCoroutine()
     {
         colliderBullet.radius = 7f;
         yield return new WaitForSeconds(1f);
-        Debug.Log("bullet devrait se détruire");
+        //Debug.Log("bullet devrait se détruire");
         Destroy(this.gameObject);
     }
 
@@ -47,7 +56,13 @@ public class CanonBall : MonoBehaviour {
     {
         if (other.gameObject.tag == "playerRunner")
         {
-            GameManager.Instance.SwitchPosition(other.gameObject.GetComponent<PlayerScript>(), bulletShooter.GetComponent<PlayerScript>());
+            //Debug.Log("colision avec playerRunner");
+            Debug.Log(bulletShooter);
+            Debug.Log("exist " + other.gameObject.GetComponent<PlayerScript>() + bulletShooter.gameObject.GetComponent<PlayerScript>());
+
+            GameManager.Instance.SwitchPosition(other.gameObject.GetComponent<PlayerScript>(), bulletShooter.gameObject.GetComponent<PlayerScript>());
+
+            Destroy(this.gameObject);
         }
     }
 }

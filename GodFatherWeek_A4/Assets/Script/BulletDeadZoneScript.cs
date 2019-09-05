@@ -18,10 +18,9 @@ public class BulletDeadZoneScript : MonoBehaviour {
 
     public void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("quelque chose est sorti");
         if(collision.gameObject.tag == "Bullet")
         {
-            Debug.Log("une balle est sorti !!");
+            //Debug.Log("une balle est sorti !!");
             CanonBall bulletObject = collision.gameObject.GetComponent<CanonBall>();
             bulletObject.Explosion();
         }

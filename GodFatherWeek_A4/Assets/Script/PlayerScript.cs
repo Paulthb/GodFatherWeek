@@ -33,13 +33,15 @@ public class PlayerScript : MonoBehaviour {
 
     public void SwitchSprite(bool isOni)
     {
-        if (isOni)
+        if (!isOni)
         {
             GetComponent<SpriteRenderer>().sprite = spritePlayerBase;
             canon.GetComponent<SpriteRenderer>().sprite = spritePlayerCanon;
         }
         else
-
+        {
             GetComponent<SpriteRenderer>().sprite = spriteOni;
+            gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
     }
 }

@@ -34,11 +34,7 @@ public class CanonBall : MonoBehaviour {
 
     public void Explosion()
     {
-        Debug.Log("EXPLOSION");
         speed = 0;
-        //rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        rb.velocity = Vector2.zero;
-        rb.angularVelocity = 0;
         Destroy(this.gameObject.GetComponent<SpriteRenderer>());
         StartCoroutine(ExplosionCoroutine());
         explosionParticle.Play();
@@ -47,7 +43,7 @@ public class CanonBall : MonoBehaviour {
     IEnumerator ExplosionCoroutine()
     {
         colliderBullet.radius = 7f;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         //Debug.Log("bullet devrait se détruire");
         Destroy(this.gameObject);
     }
@@ -57,12 +53,13 @@ public class CanonBall : MonoBehaviour {
         if (other.gameObject.tag == "playerRunner")
         {
             //Debug.Log("colision avec playerRunner");
-            Debug.Log(bulletShooter);
-            Debug.Log("exist " + other.gameObject.GetComponent<PlayerScript>() + bulletShooter.gameObject.GetComponent<PlayerScript>());
+            //Debug.Log(bulletShooter);
+            //Debug.Log("exist " + other.gameObject.GetComponent<PlayerScript>() + bulletShooter.gameObject.GetComponent<PlayerScript>());
 
+            Explosion();
             GameManager.Instance.SwitchPosition(other.gameObject.GetComponent<PlayerScript>(), bulletShooter.gameObject.GetComponent<PlayerScript>());
 
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
     }
 }

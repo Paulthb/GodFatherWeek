@@ -44,6 +44,9 @@ public class GameManager : MonoBehaviour {
     PlayerScript actualPrevRunner;
     PlayerScript actualPrevShooter;
 
+    [SerializeField]
+    private GameObject deathParticle;
+
     // Use this for initialization
     void Start () {
 		
@@ -66,7 +69,6 @@ public class GameManager : MonoBehaviour {
                 access = false;
                 SwitchRole(actualPrevRunner, actualPrevShooter);
             }
-
         }
     }
 
@@ -77,6 +79,9 @@ public class GameManager : MonoBehaviour {
 
         o1Position = actualPrevRunner.transform.position;
         o2Position = actualPrevShooter.transform.position;
+
+        deathParticle.transform.position = o1Position;
+        deathParticle.GetComponent<ParticleSystem>().Play();
 
         access = true;
 

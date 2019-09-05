@@ -194,7 +194,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!114 &114165146506796760
 MonoBehaviour:
@@ -242,8 +242,9 @@ MonoBehaviour:
   currentRole: 0
   nbPlayer: 0
   canon: {fileID: 1364157266970858}
-  SpritePlayerBase: {fileID: 21300000, guid: 65d830420bbde8f45803b5bcb04c485b, type: 3}
-  SpritePlayerCanon: {fileID: 21300000, guid: fcebcbee698b68748b73507578ed6d09, type: 3}
+  spritePlayerBase: {fileID: 21300000, guid: 65d830420bbde8f45803b5bcb04c485b, type: 3}
+  spritePlayerCanon: {fileID: 21300000, guid: fcebcbee698b68748b73507578ed6d09, type: 3}
+  spriteOni: {fileID: 21300000, guid: 1f05c6911f496a642ac2682f364a99c7, type: 3}
 --- !u!114 &114563407810300654
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -352,7 +353,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 6c1f7897c8bc966419b002c516f45c85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

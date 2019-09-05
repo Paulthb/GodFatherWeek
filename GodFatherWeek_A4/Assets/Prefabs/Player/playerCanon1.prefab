@@ -221,8 +221,9 @@ MonoBehaviour:
   currentRole: 1
   nbPlayer: 1
   canon: {fileID: 1761980590723078}
-  SpritePlayerBase: {fileID: 21300000, guid: 46fec43adb2624841b28d4f7e1e0b348, type: 3}
-  SpritePlayerCanon: {fileID: 21300000, guid: 6c1f7897c8bc966419b002c516f45c85, type: 3}
+  spritePlayerBase: {fileID: 21300000, guid: 46fec43adb2624841b28d4f7e1e0b348, type: 3}
+  spritePlayerCanon: {fileID: 21300000, guid: 6c1f7897c8bc966419b002c516f45c85, type: 3}
+  spriteOni: {fileID: 21300000, guid: 1f05c6911f496a642ac2682f364a99c7, type: 3}
 --- !u!114 &114770769089996126
 MonoBehaviour:
   m_ObjectHideFlags: 1

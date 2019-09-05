@@ -15,8 +15,9 @@ public class PlayerScript : MonoBehaviour {
 
     public GameObject canon;
 
-    public Sprite SpritePlayerBase;
-    public Sprite SpritePlayerCanon;
+    public Sprite spritePlayerBase;
+    public Sprite spritePlayerCanon;
+    public Sprite spriteOni;
 
     private int score;
 
@@ -30,9 +31,15 @@ public class PlayerScript : MonoBehaviour {
 		
 	}
 
-    public void SwitchSprite()
+    public void SwitchSprite(bool isOni)
     {
-        GetComponent<SpriteRenderer>().sprite = SpritePlayerBase;
-        canon.GetComponent<SpriteRenderer>().sprite = SpritePlayerCanon;
+        if (isOni)
+        {
+            GetComponent<SpriteRenderer>().sprite = spritePlayerBase;
+            canon.GetComponent<SpriteRenderer>().sprite = spritePlayerCanon;
+        }
+        else
+
+            GetComponent<SpriteRenderer>().sprite = spriteOni;
     }
 }

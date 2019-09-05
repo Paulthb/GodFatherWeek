@@ -61,5 +61,10 @@ public class CanonBall : MonoBehaviour {
 
             //Destroy(this.gameObject);
         }
+
+        if (other.gameObject.tag == "decor" || other.gameObject.tag == "rails")
+        {
+            Explosion();
+        }
     }
 }

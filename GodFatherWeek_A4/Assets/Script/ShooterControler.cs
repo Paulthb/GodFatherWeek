@@ -37,21 +37,24 @@ public class ShooterControler : MonoBehaviour {
     //FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     void FixedUpdate()
     {
-        float aimHorizontal = Input.GetAxis(horizontalAim);
-
-        float aimVertical = Input.GetAxis(verticalAim);
-        
-        float angle = Vector2.SignedAngle(new Vector2(-1, 0) ,new Vector2(aimHorizontal, aimVertical));
-
-        canon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-        if (Input.GetButtonDown(fire) && delay > 10)
+        if (GetComponent<PlayerScript>().canMove)
         {
-            delay = -5;
-            GameObject bulletGAO = Instantiate(bullet, a.transform.position, canon.transform.rotation);
-            bulletGAO.GetComponent<CanonBall>().bulletShooter = this.GetComponent<ShooterControler>();
-        }
+            float aimHorizontal = Input.GetAxis(horizontalAim);
 
-        delay++;
+            float aimVertical = Input.GetAxis(verticalAim);
+
+            float angle = Vector2.SignedAngle(new Vector2(-1, 0), new Vector2(aimHorizontal, aimVertical));
+
+            canon.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+            if (Input.GetButtonDown(fire) && delay > 10)
+            {
+                delay = -5;
+                GameObject bulletGAO = Instantiate(bullet, a.transform.position, canon.transform.rotation);
+                bulletGAO.GetComponent<CanonBall>().bulletShooter = this.GetComponent<ShooterControler>();
+            }
+
+            delay++;
+        }
     }
 }

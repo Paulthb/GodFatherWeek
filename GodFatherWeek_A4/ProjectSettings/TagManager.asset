@@ -8,6 +8,9 @@ TagManager:
   - Bullet
   - BulletDeadZone
   - playerRunner
+  - FxTemporaire
+  - decor
+  - rails
   layers:
   - Default
   - TransparentFX

@@ -119,7 +119,8 @@ public class GameManager : MonoBehaviour {
         prevRunner.currentRole = PlayerScript.ROLE.SHOOTER;
         prevShooter.currentRole = PlayerScript.ROLE.RUNNER;
 
-        prevRunner.SwitchSprite();
+        prevRunner.SwitchSprite(false);
+        prevShooter.SwitchSprite(true);
 
         prevRunner.tag = "playerCanon";
         prevShooter.tag = "playerRunner";

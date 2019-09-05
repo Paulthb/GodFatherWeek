@@ -47,7 +47,6 @@ public class ShooterControler : MonoBehaviour {
 
         if (Input.GetButtonDown(fire) && delay > 10)
         {
-            Debug.Log("FEU");
             delay = -5;
             GameObject bulletGAO = Instantiate(bullet, a.transform.position, canon.transform.rotation);
             bulletGAO.GetComponent<CanonBall>().bulletShooter = this.GetComponent<ShooterControler>();

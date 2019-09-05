@@ -47,15 +47,15 @@ public class CanonController : MonoBehaviour {
         //sur les rails horizontals on freeze sur Y et sur les verticales on freeze sur X
         if (onCurrentRail == ON_RAIL.HORIZONTAL)
         {
-            objectRigidB.constraints = RigidbodyConstraints2D.None;
-            objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionY;
-            actuelConstraint = RigidbodyConstraints2D.FreezePositionY;
+            //objectRigidB.constraints = RigidbodyConstraints2D.None;
+            objectRigidB.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+            actuelConstraint = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
         }
         else if (onCurrentRail == ON_RAIL.VERTICAL)
         {
-            objectRigidB.constraints = RigidbodyConstraints2D.None;
-            objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionX;
-            actuelConstraint = RigidbodyConstraints2D.FreezePositionX;
+            //objectRigidB.constraints = RigidbodyConstraints2D.None;
+            objectRigidB.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+            actuelConstraint = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
         }
     }
 
@@ -105,15 +105,15 @@ public class CanonController : MonoBehaviour {
 
         if (onCurrentRail == ON_RAIL.HORIZONTAL)
         {
-            objectRigidB.constraints = RigidbodyConstraints2D.None;
-            objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionY;
-            actuelConstraint = RigidbodyConstraints2D.FreezePositionY;
+            //objectRigidB.constraints = RigidbodyConstraints2D.None;
+            objectRigidB.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+            actuelConstraint = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
         }
         else if (onCurrentRail == ON_RAIL.VERTICAL)
         {
-            objectRigidB.constraints = RigidbodyConstraints2D.None;
-            objectRigidB.constraints = RigidbodyConstraints2D.FreezePositionX;
-            actuelConstraint = RigidbodyConstraints2D.FreezePositionX;
+            //objectRigidB.constraints = RigidbodyConstraints2D.None;
+            objectRigidB.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
+            actuelConstraint = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionX;
         }
 
         currentRailsPos = pos;
